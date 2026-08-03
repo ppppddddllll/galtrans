@@ -3,6 +3,10 @@
 > 面向 Windows 的 galgame 汉化工具，支持 **离线脚本汉化** 与 **实时翻译** 两种模式。
 
 <p align="center">
+  <img src="assets/logo.png" alt="大图书馆 汉化工具" width="220">
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/license-GPLv3-blue.svg" alt="License: GPLv3">
   <img src="https://img.shields.io/badge/python-3.10%2B-blue.svg" alt="Python: 3.10+">
   <img src="https://img.shields.io/badge/platform-Windows-lightgrey.svg" alt="Platform: Windows">
