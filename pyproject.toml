@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "galtrans"
+version = "0.1.0"
+description = "「大图书馆」一键汉化工具：离线脚本汉化 + 实时 OCR 翻译（Galgame）"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "GPL-3.0-or-later" }
+authors = [{ name = "ppppddddllll" }]
+keywords = ["galgame", "翻译", "汉化", "翻译工具", "OCR"]
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "PySide6>=6.6",
+    "requests>=2.31",
+    "Pillow>=10.0",
+    "winrt-Windows.Foundation==3.2.1",
+    "winrt-Windows.Foundation.Collections==3.2.1",
+    "winrt-Windows.Globalization==3.2.1",
+    "winrt-Windows.Graphics.Imaging==3.2.1",
+    "winrt-Windows.Media.Ocr==3.2.1",
+    "winrt-Windows.Storage==3.2.1",
+    "winrt-Windows.Storage.Streams==3.2.1",
+]
+
+[project.optional-dependencies]
+local = [
+    "transformers>=4.40",
+    "sentencepiece>=0.2",
+    "torch>=2.0",
+]
+
+[project.gui-scripts]
+galtrans = "galtrans.main:main"
+
+[project.urls]
+Homepage = "https://github.com/ppppddddllll/galtrans"
+Repository = "https://github.com/ppppddddllll/galtrans"
+Issues = "https://github.com/ppppddddllll/galtrans/issues"
+
+[tool.setuptools.packages.find]
+include = ["galtrans*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
